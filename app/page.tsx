@@ -632,10 +632,14 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
                 <button className="w-full rounded-full bg-slate-900 px-7 py-4 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto sm:px-8 sm:text-base">
-                  Undergraduate guide
+                  <a href="/undergraduate-guide" className="block">
+                    Undergraduate guide
+                  </a>
                 </button>
                 <button className="w-full rounded-full bg-slate-900 px-7 py-4 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto sm:px-8 sm:text-base">
-                  Transfer guide
+                  <a href="/transfer-guide" className="block">
+                    Transfer guide
+                  </a>
                 </button>
               </div>
             </div>
