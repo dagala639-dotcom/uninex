@@ -269,12 +269,12 @@ export default function Home() {
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
-              <button className="w-full rounded-full bg-linear-to-r from-violet-600 to-indigo-600 px-6 py-3.5 text-sm font-semibold shadow-xl shadow-violet-900/40 transition hover:scale-[1.02] sm:w-auto sm:px-7 sm:py-4 sm:text-base">
-                Start Your Application
-              </button>
-              <button className="w-full rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white/90 backdrop-blur transition hover:border-white/30 hover:bg-white/10 sm:w-auto sm:px-7 sm:py-4 sm:text-base">
-                Explore Universities
-              </button>
+              <a
+  href="https://uninexa-webapp-o2tj.vercel.app/login"
+  className="w-full rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3.5 text-center text-sm font-semibold shadow-xl shadow-violet-900/40 transition hover:scale-[1.02] sm:w-auto sm:px-7 sm:py-4 sm:text-base"
+>
+  Start Your Application
+</a>
             </div>
 
             <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4">
