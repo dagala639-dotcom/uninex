@@ -270,7 +270,7 @@ export default function Home() {
 
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <a
-  href="https://uninexa-webapp-o2tj.vercel.app"
+  href="https://uninexa-webapp-o2tj.vercel.app/signup"
   className="w-full rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3.5 text-center text-sm font-semibold shadow-xl shadow-violet-900/40 transition hover:scale-[1.02] sm:w-auto sm:px-7 sm:py-4 sm:text-base"
 >
   Start Your Application
