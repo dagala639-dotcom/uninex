@@ -877,16 +877,19 @@ export default function Home() {
 
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               <a
-                href="https://wa.me/254769753581"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={WEB_APP_LOGIN}
                 className="rounded-full bg-white px-7 py-4 text-center text-sm font-semibold text-slate-900 transition hover:scale-[1.02] sm:text-base"
               >
                 Create Your UniNexa Profile
               </a>
-              <button className="rounded-full border border-white/20 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 sm:text-base">
+              <a
+                href="https://wa.me/254769753581"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-white/15 bg-transparent px-7 py-4 text-center text-sm font-semibold text-white transition hover:border-white/30 sm:text-base"
+              >
                 Talk to an Advisor
-              </button>
+              </a>
             </div>
           </div>
         </div>
