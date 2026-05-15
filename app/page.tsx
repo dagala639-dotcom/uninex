@@ -15,17 +15,22 @@ import {
   Lock,
   Mail,
   Map,
+  MessageSquare,
   Phone,
   Plane,
   Quote,
+  Scale,
   ShieldCheck,
   Sparkles,
   User,
 } from "lucide-react";
 
+const WEB_APP_LOGIN = "https://uninexa-webapp-o2tj.vercel.app/login";
+
 const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Why UniNexa", href: "#why-uninexa" },
+  { label: "Student Protection", href: "#student-protection" },
   { label: "For Students", href: "#for-students" },
   { label: "For Universities", href: "#for-universities" },
   { label: "FAQ", href: "#faq" },
@@ -86,6 +91,39 @@ const whyCards = [
     icon: FileCheck2,
     color: "text-indigo-300",
     bg: "from-indigo-500/20 to-violet-500/20",
+  },
+];
+
+const protectionCards = [
+  {
+    title: "National Code of Ethical Practice",
+    description:
+      "UniNexa is committed to ethical student recruitment and transparent international admissions guidance.",
+    icon: Scale,
+  },
+  {
+    title: "Student Guide to Choosing an Education Agent",
+    description:
+      "Students receive guidance on choosing transparent and student-focused international admissions support.",
+    icon: BookOpen,
+  },
+  {
+    title: "Student Complaints Process",
+    description:
+      "Students can raise concerns through a documented complaints and resolution process.",
+    icon: MessageSquare,
+  },
+  {
+    title: "Counsellor Standards",
+    description:
+      "UniNexa promotes professional standards, transparency, and responsible student advising practices.",
+    icon: BadgeCheck,
+  },
+  {
+    title: "No Sub-Agent Policy",
+    description:
+      "UniNexa currently operates directly and does not rely on unverified sub-agents or channel partners.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -176,7 +214,9 @@ export default function Home() {
               className="rounded-xl object-cover"
             />
             <div>
-              <p className="text-xl font-bold tracking-tight sm:text-2xl">UniNexa</p>
+              <p className="text-xl font-bold tracking-tight sm:text-2xl">
+                UniNexa
+              </p>
               <p className="text-[11px] text-white/50 sm:text-xs">
                 Global admissions, simplified
               </p>
@@ -196,16 +236,22 @@ export default function Home() {
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
-            <button className="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white/80 transition hover:border-white/30 hover:text-white">
+            <a
+              href={WEB_APP_LOGIN}
+              className="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white/80 transition hover:border-white/30 hover:text-white"
+            >
               Sign In
-            </button>
-            <button className="rounded-full bg-linear-to-r from-violet-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-900/40 transition hover:scale-[1.02]">
+            </a>
+            <a
+              href={WEB_APP_LOGIN}
+              className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-900/40 transition hover:scale-[1.02]"
+            >
               Get Started
-            </button>
+            </a>
           </div>
 
           <details className="md:hidden">
-            <summary className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-white/5 list-none">
+            <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-white/10 bg-white/5">
               <ChevronDown className="h-5 w-5" strokeWidth={1.8} />
             </summary>
             <div className="absolute left-4 right-4 top-[72px] rounded-2xl border border-white/10 bg-[#0a1024]/95 p-4 shadow-2xl backdrop-blur">
@@ -220,12 +266,18 @@ export default function Home() {
                   </a>
                 ))}
                 <div className="mt-2 flex flex-col gap-3">
-                  <button className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/80">
+                  <a
+                    href={WEB_APP_LOGIN}
+                    className="rounded-full border border-white/15 px-5 py-3 text-center text-sm font-medium text-white/80"
+                  >
                     Sign In
-                  </button>
-                  <button className="rounded-full bg-linear-to-r from-violet-600 to-indigo-600 px-5 py-3 text-sm font-semibold text-white">
+                  </a>
+                  <a
+                    href={WEB_APP_LOGIN}
+                    className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-3 text-center text-sm font-semibold text-white"
+                  >
                     Get Started
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -245,19 +297,21 @@ export default function Home() {
             <source src="/hero.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-[#050816]/75" />
-          <div className="absolute inset-0 bg-linear-to-r from-[#050816] via-[#050816]/80 to-[#050816]/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050816] via-[#050816]/80 to-[#050816]/60" />
         </div>
 
         <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 md:gap-12 md:pt-16 lg:grid-cols-2 lg:items-center lg:gap-14 lg:pb-20 lg:pt-24">
           <div>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-white/5 px-3 py-2 text-xs text-violet-200 sm:px-4 sm:text-sm">
               <Sparkles className="h-4 w-4" strokeWidth={1.8} />
-              <span>Built for Kenyan students. Designed for global admissions.</span>
+              <span>
+                Built for Kenyan students. Designed for global admissions.
+              </span>
             </div>
 
             <h1 className="max-w-3xl text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl md:text-6xl xl:text-7xl">
               Your global future starts with{" "}
-              <span className="bg-linear-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">
                 UniNexa
               </span>
             </h1>
@@ -270,11 +324,11 @@ export default function Home() {
 
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <a
-  href="https://uninexa-webapp-o2tj.vercel.app/login"
-  className="w-full rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3.5 text-center text-sm font-semibold shadow-xl shadow-violet-900/40 transition hover:scale-[1.02] sm:w-auto sm:px-7 sm:py-4 sm:text-base"
->
-  Start Your Application
-</a>
+                href={WEB_APP_LOGIN}
+                className="w-full rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3.5 text-center text-sm font-semibold shadow-xl shadow-violet-900/40 transition hover:scale-[1.02] sm:w-auto sm:px-7 sm:py-4 sm:text-base"
+              >
+                Start Your Application
+              </a>
             </div>
 
             <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4">
@@ -303,11 +357,13 @@ export default function Home() {
             <div className="absolute -left-6 top-6 h-28 w-28 rounded-full bg-violet-600/20 blur-3xl sm:h-40 sm:w-40" />
             <div className="absolute -right-6 bottom-6 h-32 w-32 rounded-full bg-indigo-500/20 blur-3xl sm:h-44 sm:w-44" />
 
-            <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-linear-to-br from-white/10 to-white/5 p-3 shadow-2xl shadow-black/40 backdrop-blur-xl sm:rounded-[32px] sm:p-4">
+            <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-3 shadow-2xl shadow-black/40 backdrop-blur-xl sm:rounded-[32px] sm:p-4">
               <div className="rounded-[20px] border border-white/10 bg-[#0a1024] p-4 sm:rounded-[28px] sm:p-6">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-xs text-violet-300 sm:text-sm">Student Dashboard Preview</p>
+                    <p className="text-xs text-violet-300 sm:text-sm">
+                      Student Dashboard Preview
+                    </p>
                     <h3 className="mt-1 text-xl font-bold sm:text-2xl">
                       Application Command Center
                     </h3>
@@ -319,19 +375,29 @@ export default function Home() {
 
                 <div className="mt-5 grid gap-4 lg:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
-                    <p className="text-xs text-white/50 sm:text-sm">Profile Completion</p>
+                    <p className="text-xs text-white/50 sm:text-sm">
+                      Profile Completion
+                    </p>
                     <div className="mt-3 flex items-end justify-between gap-3">
-                      <p className="text-3xl font-black text-violet-300 sm:text-4xl">65%</p>
-                      <p className="text-xs text-emerald-300 sm:text-sm">Verification enabled</p>
+                      <p className="text-3xl font-black text-violet-300 sm:text-4xl">
+                        65%
+                      </p>
+                      <p className="text-xs text-emerald-300 sm:text-sm">
+                        Verification enabled
+                      </p>
                     </div>
                     <div className="mt-4 h-3 rounded-full bg-white/10">
-                      <div className="h-3 w-[65%] rounded-full bg-linear-to-r from-violet-500 to-indigo-500" />
+                      <div className="h-3 w-[65%] rounded-full bg-gradient-to-r from-violet-500 to-indigo-500" />
                     </div>
                   </div>
 
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
-                    <p className="text-xs text-white/50 sm:text-sm">Next Step</p>
-                    <p className="mt-3 text-base font-semibold sm:text-lg">Upload KCSE Results</p>
+                    <p className="text-xs text-white/50 sm:text-sm">
+                      Next Step
+                    </p>
+                    <p className="mt-3 text-base font-semibold sm:text-lg">
+                      Upload KCSE Results
+                    </p>
                     <p className="mt-2 text-xs text-white/60 sm:text-sm">
                       Add your result slip and certificate to continue your application.
                     </p>
@@ -340,14 +406,18 @@ export default function Home() {
 
                 <div className="mt-4 grid gap-4 lg:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
-                    <p className="text-xs text-white/50 sm:text-sm">Saved Universities</p>
+                    <p className="text-xs text-white/50 sm:text-sm">
+                      Saved Universities
+                    </p>
                     <div className="mt-3 space-y-3">
                       {universities.map((school) => (
                         <div
                           key={school}
                           className="flex items-center justify-between gap-4 rounded-xl border border-white/5 bg-black/20 px-4 py-3"
                         >
-                          <span className="text-xs text-white/85 sm:text-sm">{school}</span>
+                          <span className="text-xs text-white/85 sm:text-sm">
+                            {school}
+                          </span>
                           <span className="shrink-0 text-[10px] text-violet-300 sm:text-xs">
                             Saved
                           </span>
@@ -357,7 +427,9 @@ export default function Home() {
                   </div>
 
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
-                    <p className="text-xs text-white/50 sm:text-sm">Recent Activity</p>
+                    <p className="text-xs text-white/50 sm:text-sm">
+                      Recent Activity
+                    </p>
                     <div className="mt-3 space-y-3 text-xs sm:text-sm">
                       <div className="rounded-xl border border-white/5 bg-black/20 px-4 py-3 text-white/80">
                         Personal profile updated
@@ -390,7 +462,10 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-2 sm:px-6">
         <div className="grid gap-3 rounded-[24px] border border-white/10 bg-white/[0.04] p-4 sm:grid-cols-2 sm:gap-4 sm:p-6 xl:grid-cols-4">
           {trustStats.map((stat) => (
-            <div key={stat.value} className="rounded-2xl border border-white/10 bg-black/20 p-5">
+            <div
+              key={stat.value}
+              className="rounded-2xl border border-white/10 bg-black/20 p-5"
+            >
               <p className="text-2xl font-black text-violet-300">{stat.value}</p>
               <p className="mt-2 text-sm text-white/60">{stat.label}</p>
             </div>
@@ -398,7 +473,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
+      <section
+        id="how-it-works"
+        className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10"
+      >
         <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-6 shadow-2xl backdrop-blur-xl sm:rounded-[32px] sm:p-8 md:p-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet-300 sm:text-sm sm:tracking-[0.3em]">
@@ -406,13 +484,13 @@ export default function Home() {
             </p>
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
               Your journey in{" "}
-              <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
                 3 simple steps
               </span>
             </h2>
             <p className="mt-4 text-sm leading-7 text-white/65 sm:text-base">
-              UniNexa simplifies international applications into a guided, structured,
-              and repeatable process.
+              UniNexa simplifies international applications into a guided,
+              structured, and repeatable process.
             </p>
           </div>
 
@@ -442,7 +520,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-uninexa" className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
+      <section
+        id="why-uninexa"
+        className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10"
+      >
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet-300 sm:text-sm sm:tracking-[0.3em]">
             Why UniNexa
@@ -451,8 +532,8 @@ export default function Home() {
             A smarter, more transparent way to apply abroad
           </h2>
           <p className="mt-4 text-sm leading-7 text-white/65 sm:text-base">
-            Built for Kenyan students and designed to create stronger, more trusted
-            international applications.
+            Built for Kenyan students and designed to create stronger, more
+            trusted international applications.
           </p>
         </div>
 
@@ -465,7 +546,7 @@ export default function Home() {
                 className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:border-violet-400/25"
               >
                 <div
-                  className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br ${card.bg} ${card.color}`}
+                  className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${card.bg} ${card.color}`}
                 >
                   <Icon className="h-6 w-6" strokeWidth={1.8} />
                 </div>
@@ -489,8 +570,8 @@ export default function Home() {
               More transparency. More control.
             </h3>
             <p className="mt-4 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
-              UniNexa gives students a more structured and visible application journey
-              compared with traditional agency-led processes.
+              UniNexa gives students a more structured and visible application
+              journey compared with traditional agency-led processes.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -527,22 +608,35 @@ export default function Home() {
               Structured applications from a high-potential market
             </h3>
             <p className="mt-4 text-sm leading-7 text-white/65 sm:text-base">
-              UniNexa helps institutions receive cleaner, more complete, and easier-to-review
-              applications from Kenyan students.
+              UniNexa helps institutions receive cleaner, more complete, and
+              easier-to-review applications from Kenyan students.
             </p>
 
             <ul className="mt-8 space-y-4 text-sm text-white/75 sm:text-base">
               <li className="flex items-start gap-3">
-                <Building2 className="mt-1 h-5 w-5 shrink-0 text-indigo-300" strokeWidth={1.8} />
+                <Building2
+                  className="mt-1 h-5 w-5 shrink-0 text-indigo-300"
+                  strokeWidth={1.8}
+                />
                 <span>Access a growing pool of qualified Kenyan applicants</span>
               </li>
               <li className="flex items-start gap-3">
-                <FileCheck2 className="mt-1 h-5 w-5 shrink-0 text-indigo-300" strokeWidth={1.8} />
-                <span>Receive more standardized and better organized applications</span>
+                <FileCheck2
+                  className="mt-1 h-5 w-5 shrink-0 text-indigo-300"
+                  strokeWidth={1.8}
+                />
+                <span>
+                  Receive more standardized and better organized applications
+                </span>
               </li>
               <li className="flex items-start gap-3">
-                <ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-indigo-300" strokeWidth={1.8} />
-                <span>Improve confidence in academic data quality and document consistency</span>
+                <ShieldCheck
+                  className="mt-1 h-5 w-5 shrink-0 text-indigo-300"
+                  strokeWidth={1.8}
+                />
+                <span>
+                  Improve confidence in academic data quality and document consistency
+                </span>
               </li>
             </ul>
 
@@ -554,15 +648,16 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
-        <div className="rounded-[24px] border border-white/10 bg-linear-to-r from-sky-900/90 to-cyan-700/80 p-6 shadow-2xl sm:rounded-[32px] sm:p-8 md:p-12">
+        <div className="rounded-[24px] border border-white/10 bg-gradient-to-r from-sky-900/90 to-cyan-700/80 p-6 shadow-2xl sm:rounded-[32px] sm:p-8 md:p-12">
           <div className="max-w-4xl">
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
               Plan your global future
             </h2>
             <p className="mt-5 max-w-3xl text-sm leading-7 text-white/85 sm:mt-6 sm:text-base sm:leading-8 md:text-lg">
-              Everything you need to prepare for international university applications —
-              from finding the right-fit universities and understanding funding to
-              organizing documents and planning your next steps.
+              Everything you need to prepare for international university
+              applications — from finding the right-fit universities and
+              understanding funding to organizing documents and planning your next
+              steps.
             </p>
           </div>
 
@@ -617,7 +712,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="for-students" className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
+      <section
+        id="for-students"
+        className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10"
+      >
         <div className="rounded-[24px] border border-emerald-300/40 bg-[#f8f6ec] p-6 text-slate-900 shadow-2xl sm:rounded-[32px] sm:p-8 md:p-12">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
             <div className="max-w-3xl">
@@ -626,8 +724,9 @@ export default function Home() {
               </h2>
               <div className="mt-8 h-1 w-14 rounded-full bg-slate-900" />
               <p className="mt-8 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base sm:leading-8 md:text-lg">
-                Applying abroad can feel complex. UniNexa gives you a clearer, guided
-                path so you can prepare stronger applications with confidence.
+                Applying abroad can feel complex. UniNexa gives you a clearer,
+                guided path so you can prepare stronger applications with
+                confidence.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
@@ -646,6 +745,79 @@ export default function Home() {
 
             <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-300 bg-emerald-50 text-emerald-700 sm:h-20 sm:w-20">
               <BookOpen className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={1.8} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="student-protection"
+        className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10"
+      >
+        <div className="rounded-[24px] border border-white/10 bg-[#0a1024]/80 p-6 shadow-2xl backdrop-blur sm:rounded-[32px] sm:p-8 md:p-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-300 sm:text-sm sm:tracking-[0.3em]">
+              Student Protection
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
+              Ethical recruitment and student-first standards
+            </h2>
+
+            <p className="mt-4 text-sm leading-7 text-white/65 sm:text-base">
+              UniNexa is committed to transparency, ethical guidance, and
+              responsible international student recruitment practices.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            {protectionCards.map((card) => {
+              const Icon = card.icon;
+
+              return (
+                <div
+                  key={card.title}
+                  className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:border-emerald-400/25"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-300">
+                    <Icon className="h-6 w-6" strokeWidth={1.8} />
+                  </div>
+
+                  <h3 className="mt-6 text-xl font-bold">{card.title}</h3>
+
+                  <p className="mt-3 text-sm leading-7 text-white/65 sm:text-base">
+                    {card.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-emerald-400/20 bg-emerald-500/5 p-6">
+            <h3 className="text-xl font-bold text-emerald-300">
+              Student Complaints & Resolution
+            </h3>
+
+            <p className="mt-4 text-sm leading-7 text-white/70 sm:text-base">
+              Students who experience concerns regarding counselling, applications,
+              communication, or admissions support may submit complaints directly to
+              UniNexa for formal review.
+            </p>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              {[
+                ["Step 1", "Submit complaint"],
+                ["Step 2", "UniNexa review"],
+                ["Step 3", "Resolution response"],
+              ].map(([step, text]) => (
+                <div
+                  key={step}
+                  className="rounded-2xl border border-white/10 bg-black/20 p-4"
+                >
+                  <p className="text-sm font-semibold text-white">{step}</p>
+                  <p className="mt-2 text-sm text-white/60">{text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -671,7 +843,9 @@ export default function Home() {
                 <summary className="cursor-pointer list-none font-semibold">
                   {item.q}
                 </summary>
-                <p className="mt-3 text-sm leading-7 text-white/65 sm:text-base">{item.a}</p>
+                <p className="mt-3 text-sm leading-7 text-white/65 sm:text-base">
+                  {item.a}
+                </p>
               </details>
             ))}
           </div>
@@ -679,25 +853,29 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12">
-        <div className="overflow-hidden rounded-[28px] border border-white/10 bg-linear-to-r from-violet-700/30 via-indigo-700/20 to-fuchsia-700/30 p-6 shadow-2xl backdrop-blur sm:rounded-[36px] sm:p-8 md:p-12">
+        <div className="overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-r from-violet-700/30 via-indigo-700/20 to-fuchsia-700/30 p-6 shadow-2xl backdrop-blur sm:rounded-[36px] sm:p-8 md:p-12">
           <div className="grid gap-8 lg:grid-cols-[1.5fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet-200 sm:text-sm sm:tracking-[0.3em]">
                 Ready to begin?
               </p>
               <h2 className="mt-4 max-w-3xl text-3xl font-bold sm:text-4xl md:text-5xl">
-                Build your international application journey with a premium Kenyan-first platform
+                Build your international application journey with a premium
+                Kenyan-first platform
               </h2>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base md:text-lg">
-                UniNexa helps you organize records, discover universities, and move
-                through the application process with clarity and confidence.
+                UniNexa helps you organize records, discover universities, and
+                move through the application process with clarity and confidence.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <button className="rounded-full bg-white px-7 py-4 text-sm font-semibold text-slate-900 transition hover:scale-[1.02] sm:text-base">
+              <a
+                href={WEB_APP_LOGIN}
+                className="rounded-full bg-white px-7 py-4 text-center text-sm font-semibold text-slate-900 transition hover:scale-[1.02] sm:text-base"
+              >
                 Create Your UniNexa Profile
-              </button>
+              </a>
               <button className="rounded-full border border-white/20 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 sm:text-base">
                 Talk to an Advisor
               </button>
@@ -719,12 +897,14 @@ export default function Home() {
               />
               <div>
                 <p className="text-2xl font-bold">UniNexa</p>
-                <p className="text-xs text-white/50">Global admissions, simplified</p>
+                <p className="text-xs text-white/50">
+                  Global admissions, simplified
+                </p>
               </div>
             </div>
             <p className="mt-5 max-w-md leading-7 text-white/60">
-              Connecting Kenyan students to international universities through a more
-              structured, guided, and trusted digital admissions experience.
+              Connecting Kenyan students to international universities through a
+              more structured, guided, and trusted digital admissions experience.
             </p>
 
             <div className="mt-6 space-y-3 text-sm text-white/60">
@@ -746,6 +926,7 @@ export default function Home() {
               <li>Find Universities</li>
               <li>Application Guide</li>
               <li>Document Standards</li>
+              <li>Student Protection</li>
             </ul>
           </div>
 
@@ -772,7 +953,7 @@ export default function Home() {
 
         <div className="border-t border-white/10">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-center text-sm text-white/45 sm:px-6 md:flex-row md:text-left">
-            <p>© 2026 UniNexa. All rights reserved.</p>
+            <p>©️ 2026 UniNexa. All rights reserved.</p>
             <p>Made with ambition in Kenya 🇰🇪</p>
           </div>
         </div>
@@ -794,7 +975,9 @@ function MiniCard({
 }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-      <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ${iconColor}`}>
+      <div
+        className={`flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ${iconColor}`}
+      >
         {icon}
       </div>
       <p className="mt-3 font-semibold">{title}</p>
@@ -820,7 +1003,7 @@ function InfoCard({
     <div className="rounded-3xl border border-white/10 bg-[#0a1024]/80 p-6 transition hover:-translate-y-1 hover:border-violet-400/30">
       <div className="flex items-center justify-between">
         <div
-          className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br ${iconClasses}`}
+          className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${iconClasses}`}
         >
           {icon}
         </div>
