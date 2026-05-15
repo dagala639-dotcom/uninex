@@ -25,7 +25,7 @@ import {
   User,
 } from "lucide-react";
 
-const WEB_APP_LOGIN = "https://uninexa-webapp-o2tj.vercel.app/login";
+const WEB_APP_LOGIN = "https://uninexa-webapp-o2tj.vercel.app";
 
 const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
@@ -238,12 +238,16 @@ export default function Home() {
           <div className="hidden items-center gap-3 md:flex">
             <a
               href={WEB_APP_LOGIN}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white/80 transition hover:border-white/30 hover:text-white"
             >
               Sign In
             </a>
             <a
               href={WEB_APP_LOGIN}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-900/40 transition hover:scale-[1.02]"
             >
               Get Started
@@ -325,6 +329,8 @@ export default function Home() {
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <a
                 href={WEB_APP_LOGIN}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3.5 text-center text-sm font-semibold shadow-xl shadow-violet-900/40 transition hover:scale-[1.02] sm:w-auto sm:px-7 sm:py-4 sm:text-base"
               >
                 Start Your Application
