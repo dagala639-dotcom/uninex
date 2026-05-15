@@ -877,7 +877,9 @@ export default function Home() {
 
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               <a
-                href={WEB_APP_LOGIN}
+                href="https://wa.me/254769753581"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-white px-7 py-4 text-center text-sm font-semibold text-slate-900 transition hover:scale-[1.02] sm:text-base"
               >
                 Create Your UniNexa Profile
