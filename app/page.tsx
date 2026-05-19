@@ -25,7 +25,7 @@ import {
   User,
 } from "lucide-react";
 
-const WEB_APP_LOGIN = "https://uninexa-webapp-o2tj.vercel.app";
+const WEB_APP_LOGIN = "https://uninexa-webapp.vercel.app";
 
 const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
@@ -742,8 +742,8 @@ export default function Home() {
                   </a>
                 </button>
                 <button className="w-full rounded-full bg-slate-900 px-7 py-4 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto sm:px-8 sm:text-base">
-                  <a href="/transfer-guide" className="block">
-                    Transfer guide
+                  <a href="/funding-guide" className="block">
+                    Funding guide
                   </a>
                 </button>
               </div>
