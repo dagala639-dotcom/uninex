@@ -930,37 +930,65 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <p className="font-semibold">For Students</p>
-            <ul className="mt-4 space-y-3 text-sm text-white/60">
-              <li>How It Works</li>
-              <li>Find Universities</li>
-              <li>Application Guide</li>
-              <li>Document Standards</li>
-              <li>Student Protection</li>
-            </ul>
-          </div>
+         
 
           <div>
             <p className="font-semibold">For Universities</p>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
-              <li>Partner With Us</li>
-              <li>Why UniNexa</li>
-              <li>Structured Applications</li>
-              <li>Recruitment Pipeline</li>
+              <li>
+                <a href="/partner" className="transition hover:text-white">
+                  Partner With Us
+                </a>
+              </li>
+              <li>
+                <a href="/why-uninexa" className="transition hover:text-white">
+                  Why UniNexa
+                </a>
+              </li>
+              <li>
+                <a href="/recruitment-pipeline" className="transition hover:text-white">
+                  Recruitment Pipeline
+                </a>
+              </li>
             </ul>
           </div>
 
-          <div>
-            <p className="font-semibold">Company</p>
-            <ul className="mt-4 space-y-3 text-sm text-white/60">
-              <li>About</li>
-              <li>Contact</li>
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
-            </ul>
+         <div>
+  <p className="font-semibold">Company</p>
+  <ul className="mt-4 space-y-3 text-sm text-white/60">
+    <li>
+      <a href="/about" className="transition hover:text-white">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="/contact" className="transition hover:text-white">
+        Contact
+      </a>
+    </li>
+    <li>
+      <a href="/ethical-practice" className="transition hover:text-white">
+        Ethical Practice
+      </a>
+    </li>
+
+    <li>
+      <a href="/undergraduate-guide" className="transition hover:text-white">
+        Student Guide
+      </a>
+    </li>
+
+    <li>
+      <a href="/complaints" className="transition hover:text-white">
+        Complaints Process
+      </a>
+    </li>
+
+    <li>Privacy Policy</li>
+    <li>Terms of Service</li>
+  </ul>
+</div>
           </div>
-        </div>
 
         <div className="border-t border-white/10">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-center text-sm text-white/45 sm:px-6 md:flex-row md:text-left">
