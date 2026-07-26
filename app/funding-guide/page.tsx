@@ -20,7 +20,7 @@ const fundingRoutes = [
     title: "CSS Profile Institutional Aid",
     tag: "Best for US private universities",
     description:
-      "For universities that use CSS Profile to assess financial need and award institutional grants or scholarships.",
+      "For universities that use CSS Profile to assess financial need and award institutional grants or npx expo startships.",
     fit: "High-achieving students applying to private US universities with strong financial aid budgets.",
     action: "Check if your selected university requires CSS Profile.",
     icon: PiggyBank,
