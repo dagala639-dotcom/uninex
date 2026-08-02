@@ -921,7 +921,7 @@ export default function Home() {
             <div className="mt-6 space-y-3 text-sm text-white/60">
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4" strokeWidth={1.8} />
-                <span>hello@uninexa.com</span>
+                <span>connect@uninexa.org</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4" strokeWidth={1.8} />
