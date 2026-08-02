@@ -984,8 +984,16 @@ export default function Home() {
       </a>
     </li>
 
-    <li>Privacy Policy</li>
-    <li>Terms of Service</li>
+    <li>
+      <a href="/privacy" className="transition hover:text-white">
+        Privacy Policy
+      </a>
+    </li>
+    <li>
+      <a href="/terms" className="transition hover:text-white">
+        Terms of Service
+      </a>
+    </li>
   </ul>
 </div>
           </div>
