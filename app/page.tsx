@@ -25,7 +25,7 @@ import {
   User,
 } from "lucide-react";
 
-const WEB_APP_LOGIN = "https://uninexa-webapp.vercel.app";
+const WEB_APP_LOGIN = "https://app.uninexa.org/login";
 
 const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
